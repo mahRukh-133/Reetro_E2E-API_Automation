@@ -1,0 +1,26 @@
+{
+  "name": "reetro-e2e-api",
+  "version": "1.0.0",
+  "description": "e2e and api test cases of reetro app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "allTest-Headless": "npx cypress run",
+    "allTests-Headed": "npx cypress run --headed",
+    "allTests-e2e": "npx cypress run cypress/e2e/* --record --key f65341bd-a7a4-4ddf-995b-04461da95f84",
+    "allTests-chrome": "npx cypress run --browser chrome",
+    "allTests-firefox": "npx cypress run --browser firefox",
+    "cypress-multi-browser": " npm run allTests-e2e -- --browser firefox --port 4446 & npm run allTests-e2e -- --browser chrome --port 4447",
+    "combine-reports": " mochawesome-merge ./cypress/reports/mochawesome-report/*.json >./mochareports/report.json ",
+    "generate-report": "marge mochareports/report.json --reportDir mochawesome --assetsDir mochawesome/assests --reportPageTitle index.html",
+    "Regression-Creation-Task": "npx cypress run --spec cypress/e2e/CreationTasks  --record --key f65341bd-a7a4-4ddf-995b-04461da95f84 --browser chrome --port 4445 & npx cypress run --spec cypress/e2e/CreationTasks  --record --key f65341bd-a7a4-4ddf-995b-04461da95f84 --browser firefox --port 4446 "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  },
+  "dependencies": {
+    "chance": "^1.1.11"
+  }
+}
