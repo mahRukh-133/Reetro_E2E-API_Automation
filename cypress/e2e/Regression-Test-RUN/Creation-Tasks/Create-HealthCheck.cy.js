@@ -11,9 +11,9 @@ describe('Health_Check', () => {
     beforeEach(() => {
         
         cy.visit(ProductionURL)
-        cy.get(email_field).type(producAdmin)
-        cy.get(Password_field).type('test1234')
-        cy.get(Login_Button).click()
+        cy.get(email_field).click().type(producAdmin)
+        cy.get(Password_field).click().type('test1234')
+        cy.get(Login_Button).click({force:true})
         cy.get(':nth-child(3) > .team-box-button').click()
     });
 

@@ -4,7 +4,7 @@ import { Password_field,Login_Button,SelectCompany } from "../../../../Helpers"
 import { producAdmin } from "../../../../Helpers"
 
 
-it('Delete Board',()=>{
+it('Delete POlls',()=>{
     cy.visit(ProductionURL)
     cy.get(email_field).click().type(producAdmin)
     cy.get(Password_field).click().type('test1234')
@@ -13,8 +13,8 @@ it('Delete Board',()=>{
 
     cy.get('.sidebar-item').eq(3).click({force:true})
 
-
-    cy.get('[href="/team-health/64071ffdaba228540fb4207a/64071ffdaba228540fb4208a/polls"] > .button-primary').click();
+    cy.get(':nth-child(9) > .card-poll > :nth-child(1) > .board-more-options-dropdown > .fa-ellipsis-h').click()
+    //cy.get('[href="/team-health/64071ffdaba228540fb4207a/64071ffdaba228540fb4208a/polls"] > .button-primary').click();
     cy.get(':nth-child(17) > .card-poll > :nth-child(1) > .board-more-options-dropdown > .fa-ellipsis-h').click();
     cy.get(':nth-child(17) > .card-poll > :nth-child(1) > .board-more-options-dropdown > .chc-export-ul-wrap > .export-ul > li > .fas').click();
     cy.get('.button-export').click();

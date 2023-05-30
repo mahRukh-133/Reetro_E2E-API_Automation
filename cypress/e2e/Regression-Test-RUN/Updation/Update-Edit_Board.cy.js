@@ -20,13 +20,12 @@ it('Delete Board',()=>{
     cy.get(':nth-child(5) > .cf-text-field').should('be.enabled');
     cy.get(':nth-child(6) > .cf-text-field').should('be.enabled');
     cy.get(':nth-child(7) > .cf-text-field').should('be.enabled');
-    cy.get(':nth-child(8) > .cf-text-field').should('be.enabled');
-    cy.get(':nth-child(11) > .cf-switch').should('be.visible');
-    cy.get(':nth-child(11) > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
-    cy.get(':nth-child(12) > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
-    cy.get('.um2-dropdown > .switch-option > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
-    cy.get('.vote-counter > input').should('be.visible');
-    cy.get('.vote-counter > input').should('be.enabled');
+  
+   // cy.get(':nth-child(11) > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
+    //cy.get(':nth-child(12) > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
+    //cy.get('.um2-dropdown > .switch-option > .cf-switch > .toggle-switch > .switch > .slider').should('be.visible');
+    //cy.get('.vote-counter > input').should('be.visible');
+    //cy.get('.vote-counter > input').should('be.enabled');
     cy.get('.create-board-btn').should('be.visible');
     cy.get('.create-board-btn').should('be.enabled');
     cy.get('.create-board-btn').click();

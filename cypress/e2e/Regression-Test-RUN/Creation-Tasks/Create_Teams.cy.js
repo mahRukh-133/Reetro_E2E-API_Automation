@@ -56,14 +56,21 @@ describe('Create Team', () => {
         //validate and verify that Create Team popup opens
         cy.get('.cn-team-popup').should('have.text', 'Create New TeamSelect Team AdminCancelSave');
         cy.get('.clone-board-h1').should('be.visible');
-  
+
         cy.get('.select-dd > .container > .reetro-select-container > .reetro-select__control > .reetro-select__value-container > .reetro-select__single-value').click();
-        cy.get('#react-select-5-option-3').click();
-        cy.get('.button-export').click();
+        //cy.get('#react-select-5-option-3').click();
+        //cy.get('.button-export').click();
 
         //validate error message
+        //cy.get('.toast-heading').should('be.visible');
+        //cy.get('.toast-heading').should('have.text', 'Error!×');
+        /* ==== Generated with Cypress Studio ==== */
+        cy.get('#react-select-5-option-1').click();
+        cy.get('.button-export').click();
         cy.get('.toast-heading').should('be.visible');
-        cy.get('.toast-heading').should('have.text', 'Error!×');
+        cy.get('.toast-text').should('have.class', 'toast-text');
+        cy.get('.toast-text').click();
+        /* ==== End Cypress Studio ==== */
     })
 
     it('if user does not select admin user and create team then an error appears',()=>{

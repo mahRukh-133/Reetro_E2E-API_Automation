@@ -51,9 +51,9 @@ it.only('check that all mandatory field',()=>{
     cy.get('.text-field').click().clear()
     
     //Select Team
-    cy.get(':nth-child(4) > .container > .reetro-select-container > .reetro-select__control > .reetro-select__value-container > .reetro-select__single-value').click();
-    cy.get('#react-select-5-option-1').click();
-    cy.get('.button-export').click();
+    cy.get(':nth-child(4) > .container > .reetro-select-container > .reetro-select__control > .reetro-select__value-container > .reetro-select__single-value').click({force:true});
+    cy.get('#react-select-5-option-1').click({force:true});
+    cy.get('.button-export').click({force:true});
 
     //an error message appeared
     cy.get('.toast-heading').should('be.visible');

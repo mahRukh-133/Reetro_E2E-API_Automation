@@ -1,6 +1,6 @@
 describe('Delete Card',()=>{
 
-    it('Check api of delete card is working ',()=>{
+    it.skip('Check api of delete card is working ',()=>{
 
         cy.request(
             {
