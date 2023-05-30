@@ -1,6 +1,6 @@
-import { producAdmin } from "../../../Accounts"
-import { ProductionURL } from "../../../Constant"
-import { Login_Button, Password_field, SelectCompany, email_field } from "../../../Elements"
+import { ProductionURL } from "../../../../Helpers";
+import { producAdmin} from "../../../../Helpers";
+import { email_field,Password_field,Login_Button,SelectCompany } from "../../../../Helpers";
 
 it('Delete Board',()=>{
     cy.visit(ProductionURL)

@@ -1,6 +1,11 @@
-import { GuestURLProduc } from "../../../Constant";
-import { guest_emailF,GuestSignBtn, } from "../../../Elements";
-import { BoardSetting } from "../../../Elements";
+import { GuestURLProduc } from "../../../../Helpers";
+import { guest_emailF } from "../../../../Helpers";
+import { GuestSignBtn } from "../../../../Helpers";
+import { BoardSetting } from "../../../../Helpers";
+
+
+
+
 describe('Guest User  Negative Scenario', () => {
 
     //Add hook

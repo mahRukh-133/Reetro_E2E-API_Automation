@@ -1,4 +1,4 @@
-import { BaseUrl } from "../../../Constant"
+import { BaseUrl } from "../../../../Helpers"
 
 describe ("Admin User Actions Suite" , function()
 {

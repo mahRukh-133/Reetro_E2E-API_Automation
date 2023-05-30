@@ -1,7 +1,5 @@
-import { it } from "mocha";
-import { BaseUrl } from "../../../Constant";
-import { email_field,Password_field,Login_Button, SuccessMsg } from "../../../Elements";
-
+import { BaseUrl,email_field,Password_field,Login_Button } from "../../../../Helpers";
+import { SuccessMsg } from "../../../../Helpers";
 
 /// <reference types = "Cypress-iframe"/>
 describe('Add More Team', () => {

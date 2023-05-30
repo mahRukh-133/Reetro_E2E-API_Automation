@@ -1,15 +1,17 @@
-import { BaseUrl, ProductionURL } from "../../../Constant";
-import { email_field, SuccessMsg } from "../../../Elements";
-import { Password_field } from "../../../Elements";
-import { Login_Button } from "../../../Elements";
-import { SelectCompany } from "../../../Elements";
-import { passwrdstag, stagingEmail } from "../../../Accounts";
-import { ProductionEmail } from "../../../Accounts";
+
+import { ProductionURL } from "../../../../Helpers";
+import { email_field } from "../../../../Helpers";
+import { Password_field } from "../../../../Helpers";
+import { Login_Button } from "../../../../Helpers";
+import { SelectCompany,producAdmin,passwrdstag,ProductionEmail } from "../../../../Helpers";
+
+
+
 describe('Actions on Board', () => {
 
     beforeEach(() => {
         cy.visit(ProductionURL)
-        cy.get(email_field).type(ProductionEmail)
+        cy.get(email_field).type(producAdmin)
         cy.get(Password_field).type(passwrdstag)
         cy.get(Login_Button).click()
         cy.get(SelectCompany).click()

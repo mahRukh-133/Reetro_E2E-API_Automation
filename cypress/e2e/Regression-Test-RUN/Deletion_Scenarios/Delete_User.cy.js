@@ -1,5 +1,8 @@
-import { ProductionURL } from "../../../Constant"
-import { Password_field, email_field } from "../../../Elements"
+import { ProductionURL } from "../../../../Helpers"
+import { email_field } from "../../../../Helpers"
+import { Password_field,Login_Button,SelectCompany } from "../../../../Helpers"
+import { producAdmin } from "../../../../Helpers"
+
 
 it.skip('delete user',()=>{
     cy.visit(ProductionURL)

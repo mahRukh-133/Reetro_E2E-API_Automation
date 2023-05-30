@@ -1,7 +1,11 @@
-import { ProductionEmail } from "../../../Accounts";
-import { ProductionURL } from "../../../Constant";
-import { email_field, Login_Button, Password_field, SuccessMsg } from "../../../Elements";
-import {producAdmin} from "../../../Accounts"
+import { BaseUrl } from "../../../../Helpers"
+import { email_field } from "../../../../Helpers"
+import { Password_field } from "../../../../Helpers"
+import { Login_Button } from "../../../../Helpers"
+import { ProductionURL } from "../../../../Helpers"
+import { producAdmin } from "../../../../Helpers"
+
+
 describe('Polls', () => {
     beforeEach(() => {
         cy.visit(ProductionURL)

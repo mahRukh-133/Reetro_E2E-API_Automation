@@ -1,7 +1,8 @@
 
-import { ProductionURL } from "../../../Constant";
-import { ProductionEmail, producAdmin } from "../../../Accounts";
-import { SuccessMsg } from "../../../Elements";
+import { ProductionURL } from "../../../../Helpers";
+import { producAdmin} from "../../../../Helpers";
+import { SuccessMsg } from "../../../../Helpers";
+
 describe('Update Profile', () => {
 
  

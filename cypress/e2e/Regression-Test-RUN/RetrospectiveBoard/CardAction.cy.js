@@ -1,10 +1,8 @@
-import { BaseUrl, ProductionURL } from "../../../Constant";
-import { email_field } from "../../../Elements";
-import { Password_field } from "../../../Elements";
-import { Login_Button } from "../../../Elements";
-import { SelectCompany } from "../../../Elements";
-import { passwrdstag, producAdmin, stagingEmail } from "../../../Accounts";
-import { SuccessMsg } from "../../../Elements";
+import { ProductionURL } from "../../../../Helpers";
+import { email_field } from "../../../../Helpers";
+import { Password_field } from "../../../../Helpers";
+import { Login_Button } from "../../../../Helpers";
+import { SelectCompany,producAdmin,passwrdstag } from "../../../../Helpers";
 describe('', () => {
 
     beforeEach(() => {

@@ -1,7 +1,6 @@
 /// <reference types = "Cypress-iframe"/>
 
-import { BaseUrl } from "../../../Constant"
-import { email_field,Password_field, Login_Button, ToastMsg, SuccessMsg } from "../../../Elements"
+import { BaseUrl,email_field,Password_field,Login_Button } from "../../../../Helpers";
 
 describe('Payment', () => {
 

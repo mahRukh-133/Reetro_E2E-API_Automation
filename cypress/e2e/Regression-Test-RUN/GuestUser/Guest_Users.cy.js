@@ -1,5 +1,4 @@
-import { GuestURLProduc } from "../../../Constant"
-import { email_field } from "../../../Elements";
+import { GuestURLProduc } from "../../../../Helpers";
 describe('Guest', () => {
       
     beforeEach(() => {

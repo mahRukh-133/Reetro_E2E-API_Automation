@@ -1,10 +1,11 @@
-import { producAdmin } from "../../../Accounts";
-import {  ProductionURL } from "../../../Constant";
-import { BoardDescription, BoardTempName, BoardTitle, boardType, CreateBoardBtn, CustomTempBoard, email_field, MaskCommentToggle, PublicBoardToggle, RUnanonmyoustoggle, SaveAsTemplateBoard} from "../../../Elements";
-import { Password_field } from "../../../Elements";
-import { Login_Button } from "../../../Elements";
-import { SelectCompany } from "../../../Elements";
-import { NewBoard } from "../../../Elements";
+import { BaseUrl } from "../../../../Helpers"
+import { email_field } from "../../../../Helpers"
+import { Password_field } from "../../../../Helpers"
+import { stagingadmin } from "../../../../Helpers"
+import { Login_Button } from "../../../../Helpers"
+import { SelectCompany,producAdmin } from "../../../../Helpers"
+import { ProductionURL } from "../../../../Helpers"
+import { SuccessMsg } from "../../../../Helpers"
 
 describe('Create Board', () => {
 
