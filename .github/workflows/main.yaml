@@ -11,3 +11,15 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v3
        
+      - uses: actions/upload-artifact@v3
+        if : failure()
+        with:
+           name : cypress-screenshots
+           path: cypress/screenshots
+           
+      #Test run videos was always captured, so ths action uses "always()" condition
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+           name : cypress-videos
+           path: cypress-vidoes     
