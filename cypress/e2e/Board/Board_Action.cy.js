@@ -11,19 +11,18 @@ describe ('Create Custom Board',()=>{
         loginObj.enterPassword('test1234')
         loginObj.clickSubmit();
         loginObj.selectCompany();
-        boardObj.clickNewBoardBtn();
-        boardObj.ClickCustomBoardBtn();
         
 
     
     });
     it('should validate UI elements of the Custom Create board page', () => {
-        boardObj.BoardTitle('test')
-        boardObj.BoardDescrp('heelo descriptin')
-        boardObj.BoardType()
-
         /* ==== Generated with Cypress Studio ==== */
+        cy.get(':nth-child(1) > .container > .reetro-select-container > .reetro-select__control > .reetro-select__value-container > .reetro-select__single-value').click();
+        cy.get('#react-select-2-option-0').click();
+        cy.get(':nth-child(1) > .container > .reetro-select-container > .reetro-select__control > .reetro-select__value-container > .reetro-select__single-value').should('have.text', 'Automation_Test_Run');
         /* ==== End Cypress Studio ==== */
     })
 })
+
+
 
