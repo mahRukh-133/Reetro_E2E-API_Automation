@@ -9,8 +9,8 @@ class crateBoard{
         BoardDesciption : () => cy.get('.cf-textarea'),
         BoardType : () => cy.get('.reetro-select__single-value'),
         SelectBoardType : () => cy.get('#react-select-4-option-0'),
-    
-      
+        PublicTogle : () => cy.get(':nth-child(12) > .cf-switch > .toggle-switch > .switch > .slider'),
+        MaskCommentTogle : ()=> cy.get(':nth-child(13) > .cf-switch > .toggle-switch > .switch > .slider')
 
     }
 
@@ -45,7 +45,13 @@ class crateBoard{
         this.elements.SelectBoardType().click()
     }
 
+PublicBoard(){
+        this.elements.PublicTogle().click()  
+}
 
+MaskComment(){
+         this.elements.MaskCommentTogle().click()
+}
 
 }
 

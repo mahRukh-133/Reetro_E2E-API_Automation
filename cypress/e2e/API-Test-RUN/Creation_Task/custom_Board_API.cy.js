@@ -1,5 +1,5 @@
 
-
+import { Token } from "../../../../Helpers/elements/api"
 describe('Create Custom Board API Test', () => {
     const token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haHJ1a2gubG94dm8xMytqYWNrQGdtYWlsLmNvbSIsImlhdCI6MTY4NDc0OTc5MCwiZXhwIjoxNjg3MzQxNzkwfQ.pQEA_SUEvWW_8_l9ZzCBouJXbpevsvqGZrsY2i2fYxc'
         it.only('should return an success message', () => {
@@ -10,8 +10,7 @@ describe('Create Custom Board API Test', () => {
     
               headers:{
                 "accept":"application/json",
-                "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haHJ1a2gubG94dm8xMytqYWNrQGdtYWlsLmNvbSIsImlhdCI6MTY4NDc1NjQ1MiwiZXhwIjoxNjg3MzQ4NDUyfQ.rEDMV0L9Zg2C_lUfn6Wc8QwhcCwkY8Y6c9N75q6SasY"
-              }, 
+                "Authorization":Token     }, 
     
                 body:{"title":"test board template",
                 "description":"description","type":"default","isMasked":true,

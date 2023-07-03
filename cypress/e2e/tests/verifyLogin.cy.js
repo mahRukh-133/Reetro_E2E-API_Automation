@@ -17,8 +17,8 @@ describe('POM',()=>{
         loginObj.enterPassword('test1234')
         loginObj.clickSubmit();
         loginObj.selectCompany();
-        boardObj.clickNewBoardBtn();
-        boardObj.ClickCustomBoardBtn();
+        //boardObj.clickNewBoardBtn();
+        //boardObj.ClickCustomBoardBtn();
 
     })
 })

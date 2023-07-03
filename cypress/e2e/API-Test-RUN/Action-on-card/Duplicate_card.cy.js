@@ -1,3 +1,5 @@
+import { Token } from "../../../../Helpers/elements/api";
+
 describe('Duplicate Card', ()=>{
 
     it('Check the api working of Duplicate card',()=>{
@@ -9,9 +11,7 @@ describe('Duplicate Card', ()=>{
 
           headers:{
             "accept":"application/json",
-            "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haHJ1a2gubG94dm8xMytqYWNrQGdtYWlsLmNvbSIsImlhdCI6MTY4NDc1NjQ1MiwiZXhwIjoxNjg3MzQ4NDUyfQ.rEDMV0L9Zg2C_lUfn6Wc8QwhcCwkY8Y6c9N75q6SasY"
-          }, 
-
+            "Authorization":Token },
           body:{"_id":"646da6118c9d76bd67bd9bea",
           "isLegacy":false,"boardId":"646d9ec58c9d76bd67bd9036",
           "columnId":"column1","text":"test32a",

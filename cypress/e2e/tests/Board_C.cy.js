@@ -21,6 +21,8 @@ describe ('Create Custom Board',()=>{
         boardObj.BoardTitle('test')
         boardObj.BoardDescrp('heelo descriptin')
         boardObj.BoardType()
+        boardObj.PublicBoard()
+        boardObj.MaskComment()
 
         /* ==== Generated with Cypress Studio ==== */
         /* ==== End Cypress Studio ==== */
