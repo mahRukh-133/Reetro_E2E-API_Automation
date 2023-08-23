@@ -75,15 +75,11 @@ describe('Actions on Board', () => {
         cy.get('[data-rbd-droppable-id="0"] > :nth-child(2) > .ticket-options > .ticket-options-cont > .fa-palette').click();
         cy.get('.container > div > :nth-child(4)').click();
         cy.get('.button-primary').click();
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
         cy.get('.toast-heading').click();
         cy.get('.toast-heading').should('be.visible');
-        /* ==== End Cypress Studio ==== */
-        /* ==== Generated with Cypress Studio ==== */
         cy.get('.toast-heading').click();
         cy.get('.toast-heading').should('have.text', 'Success!×');
-        /* ==== End Cypress Studio ==== */
+        
 
 
     })

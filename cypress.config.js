@@ -19,7 +19,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     "experimentalStudio": true,
-
+    //"chromeWebSecurity": false,
+    "preserveOnceBeforeTests": true,
     //run all spec config
     "experimentalRunAllSpecs": true, 
   },

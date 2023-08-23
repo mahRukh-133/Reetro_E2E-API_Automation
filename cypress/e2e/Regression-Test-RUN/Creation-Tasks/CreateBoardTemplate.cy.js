@@ -8,10 +8,17 @@ import { ProductionURL } from "../../../../Helpers"
 import { SuccessMsg } from "../../../../Helpers"
 
 describe('Create Board', () => {
+    beforeEach(() => {
+        cy.tag('@smoke'); // Assign the tag @smoke to all tests in this suite
+      });
 
 it("Create Board" , function(){
+    cy.wrap(this.test.tags).then((tags) => {
+    if (tags && tags.includes('@smoke')) {
 
-    cy.visit(ProductionURL)
+    
+}
+cy.visit(ProductionURL)
     cy.get(email_field).type(producAdmin)
     cy.get(Password_field).type('test1234')
     cy.get(Login_Button).click()
@@ -32,8 +39,7 @@ cy.get('#react-select-5-option-1').click();
 cy.get('.button-export').click()
 
 //Validate baord created successfully
-cy.get('.toast-text').should('have.text','Board created successfully!')
-})
+cy.get('.toast-text').should('have.text','Board created successfully!')})
 
 
 
@@ -59,5 +65,6 @@ it.only('check that all mandatory field',()=>{
     cy.get('.toast-heading').should('be.visible');
     cy.get('.toast-text').should('have.text', 'Please enter the title for your board.');
  
+})
 })
 })

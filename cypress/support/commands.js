@@ -13,6 +13,10 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 import 'cypress-file-upload';
 
+Cypress.Commands.add('tag', (tags) => {
+    Cypress.mocha.getRunner().suite.ctx.tags = tags;
+  });
+  
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

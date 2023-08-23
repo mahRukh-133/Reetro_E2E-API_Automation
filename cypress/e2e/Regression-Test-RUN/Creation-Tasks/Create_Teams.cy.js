@@ -1,5 +1,4 @@
-import { ProductionURL } from '../../../../Helpers';
-import { email_field } from '../../../../Helpers';
+import { ProductionURL , email_field} from '../../../../Helpers';
 import { Password_field } from '../../../../Helpers';
 import { Login_Button } from '../../../../Helpers';
 import { producAdmin } from '../../../../Helpers';
@@ -64,13 +63,11 @@ describe('Create Team', () => {
         //validate error message
         //cy.get('.toast-heading').should('be.visible');
         //cy.get('.toast-heading').should('have.text', 'Error!×');
-        /* ==== Generated with Cypress Studio ==== */
         cy.get('#react-select-5-option-1').click();
         cy.get('.button-export').click();
         cy.get('.toast-heading').should('be.visible');
         cy.get('.toast-text').should('have.class', 'toast-text');
         cy.get('.toast-text').click();
-        /* ==== End Cypress Studio ==== */
     })
 
     it('if user does not select admin user and create team then an error appears',()=>{
@@ -80,11 +77,8 @@ describe('Create Team', () => {
         //validate and verify that Create Team popup opens
         cy.get('.cn-team-popup').should('have.text', 'Create New TeamSelect Team AdminCancelSave');
         cy.get('.clone-board-h1').should('be.visible');
-
-
         cy.get('.text-field').type('testTeam');
         cy.get('.button-export').click();
-
         cy.get('.toast-heading').click();
         cy.get('.toast-heading').should('be.visible');
         cy.get('.toast-text').should('have.text', 'Please select your team admin');

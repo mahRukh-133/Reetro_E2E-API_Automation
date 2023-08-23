@@ -24,7 +24,7 @@ describe('Switch the card type',()=>{
         }).then((response) => {
             expect(response.status).to.eq(200);
             expect(response.body).to.have.property('success', true)
-
+            console.log('API Response:', response);
 
         })
     })//ending it block

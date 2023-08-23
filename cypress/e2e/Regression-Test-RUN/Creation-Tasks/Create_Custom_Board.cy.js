@@ -1,18 +1,18 @@
-import { BaseUrl, BoardDescription, BoardTempName, BoardTitle, CreateBoardBtn, CustomTempBoard, Login_Button, MaskCommentToggle, NewBoard, Password_field, PublicBoardToggle, RUnanonmyoustoggle, SaveAsTemplateBoard, SelectCompany, boardType, email_field } from "../../../../Helpers";
+import { BaseUrl, BoardDescription, BoardTempName, BoardTitle, CreateBoardBtn, CustomTempBoard, Login_Button, MaskCommentToggle, NewBoard, Password_field, ProductionURL, PublicBoardToggle, RUnanonmyoustoggle, SaveAsTemplateBoard, SelectCompany, boardType, email_field, producAdmin } from "../../../../Helpers";
 
 
 describe('Create Board', () => {
 
   //This hook will redirect page to reetro.app before each test run
   beforeEach(() => {
-    cy.visit(BaseUrl)
-    cy.get(email_field).type('mahrukh.loxvo13@gmail.com ')
+    cy.visit(ProductionURL)
+    cy.get(email_field).type(producAdmin)
     cy.get(Password_field).type('test1234')
     cy.get(Login_Button).click()
     cy.get(SelectCompany).click()
 });
 
-   it("Create Board" , function()
+   it.only("Create Board" , function()
    {
 
       //TO Select company/team in which you create board  
@@ -134,7 +134,7 @@ describe('Create Board', () => {
 
    })
 
-   it.only('USer click on Cancel button then user redirected create board page',()=>{
+   it('USer click on Cancel button then user redirected create board page',()=>{
 
     //TO Select company/team in which you create board  
     cy.get('.flex > :nth-child(1)').should('be.visible').click().wait(3000)

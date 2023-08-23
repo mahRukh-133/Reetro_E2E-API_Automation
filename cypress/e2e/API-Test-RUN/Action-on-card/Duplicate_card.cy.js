@@ -25,7 +25,7 @@ describe('Duplicate Card', ()=>{
           "__v":0,"userId":"6343b3115465136fe0c02f5d",
           "companyId":"6343aae05465136fe0c01c59","username":"mahrukh.loxvo13+jack@gmail.com"}
         }).then((response) => {
-            expect(response.status).to.eq(200);
+            expect(response.status).to.eq(100);
             expect(response.body).to.have.property('success',true)
            
     })
